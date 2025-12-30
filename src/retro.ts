@@ -1,7 +1,20 @@
 // src/retro.ts
 
-import type { UiTheme, deepMerge } from "@damarkuncoro/agnostic-ui-contract-core"
+import type { UiTheme } from "@damarkuncoro/agnostic-ui-contract-core"
 import { themeCore } from "@damarkuncoro/agnostic-ui-theme-core"
+
+// Simple deep merge function
+function deepMerge(target: any, source: any): any {
+  const result = { ...target }
+  for (const key in source) {
+    if (source[key] && typeof source[key] === 'object' && !Array.isArray(source[key])) {
+      result[key] = deepMerge(result[key] || {}, source[key])
+    } else {
+      result[key] = source[key]
+    }
+  }
+  return result
+}
 
 export const retroTheme: UiTheme = deepMerge(themeCore, {
   tokens: {
