@@ -3,9 +3,10 @@
   "name": "@damarkuncoro/agnostic-ui-theme-retro",
   "version": "1.0.0",
   "description": "Theme retro for Agnostic UI",
-  "module": "lib/index.js",
+  
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  
   "exports": {
     ".": {
       "types": "./lib/index.d.ts",
@@ -37,6 +38,7 @@
   "author": "Agnostic UI Team",
   "license": "MIT",
   "dependencies": {
+    "@damarkuncoro/agnostic-ui-theme-core": "^1.0.0",
     "@damarkuncoro/agnostic-ui-contract-core": "^1.0.0"
   },
   "devDependencies": {
