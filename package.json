@@ -1,12 +1,12 @@
 {
   "type": "module",
   "name": "@damarkuncoro/agnostic-ui-theme-retro",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Theme retro for Agnostic UI",
   
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  
+
   "exports": {
     ".": {
       "types": "./lib/index.d.ts",
@@ -38,8 +38,7 @@
   "author": "Agnostic UI Team",
   "license": "MIT",
   "dependencies": {
-    "@damarkuncoro/agnostic-ui-theme-core": "^1.0.0",
-    "@damarkuncoro/agnostic-ui-contract-core": "^1.0.0"
+    "@damarkuncoro/agnostic-ui-theme-core": "file:../agnostic-ui-theme-core"
   },
   "devDependencies": {
     "typescript": "^5.0.0"
