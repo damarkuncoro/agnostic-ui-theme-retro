@@ -1,6 +1,6 @@
 // src/retro.ts
 
-import { themeCore, type UiTheme } from "../../agnostic-ui-theme-core/lib"
+import { themeCore, type UiTheme } from "@damarkuncoro/agnostic-ui-theme-core"
 
 // Retro theme extending theme-core with retro-specific token overrides
 export const retroTheme: UiTheme = {
