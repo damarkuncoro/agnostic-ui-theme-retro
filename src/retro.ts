@@ -40,20 +40,18 @@ export const retroTheme: UiTheme = {
         focus: "#d35400"
       }
     },
-    // Retro-specific typography overrides
+    // Retro-specific typography overrides (fontFamily not in UiTheme interface)
     typography: {
-      ...themeCore.tokens.typography,
-      fontFamily: { base: "Courier New, monospace" }
+      ...themeCore.tokens.typography
+      // Note: fontFamily would be added in extended tokens if needed
     },
-    // Retro-specific shadow overrides
+    // Retro-specific shadow overrides (must be Record<string, string>)
     shadow: {
       ...themeCore.tokens.shadow,
-      semantic: {
-        sm: "0 1px 2px rgba(60,31,15,0.25)",
-        md: "0 4px 6px rgba(60,31,15,0.35)",
-        lg: "0 10px 15px rgba(60,31,15,0.35)",
-        focus: "0 0 0 2px rgba(211, 84, 0, 0.5)"
-      }
+      "retro-sm": "0 1px 2px rgba(60,31,15,0.25)",
+      "retro-md": "0 4px 6px rgba(60,31,15,0.35)",
+      "retro-lg": "0 10px 15px rgba(60,31,15,0.35)",
+      "retro-focus": "0 0 0 2px rgba(211, 84, 0, 0.5)"
     }
   }
 }
